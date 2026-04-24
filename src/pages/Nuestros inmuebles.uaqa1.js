@@ -1,4 +1,4 @@
-import { properties } from 'backend/properties';
+import { properties } from 'public/properties';
 
 $w.onReady(function () {
   // Encabezado de sección
