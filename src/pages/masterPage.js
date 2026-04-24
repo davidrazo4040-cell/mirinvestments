@@ -1,46 +1,27 @@
-import wixWindow from 'wix-window';
 import wixLocation from 'wix-location';
 
 $w.onReady(function () {
-  const RAILWAY_URL = "https://mirinvestements123-production.up.railway.app";
+  // Menú de navegación
+  const menuItems = [
+    { label: "Nuestro Concepto",    link: "/nuestro-concepto" },
+    { label: "Nuestros Inmuebles",  link: "/nuestros-inmuebles" },
+    { label: "Oportunidades",       link: "/oportunidades-abiertas" },
+    { label: "Resultados",          link: "/testimonios" },
+    { label: "Contacto",            link: "/contacto" },
+  ];
 
-  // Pass current page path so Railway renders the right section
-  const path = wixLocation.path.join('/');
+  if ($w('#horizontalMenu1')) {
+    $w('#horizontalMenu1').menuItems = menuItems;
+  }
 
-  const html = `
-    <!DOCTYPE html>
-    <html>
-    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html, body { width: 100%; height: 100%; overflow: hidden; }
-        iframe {
-          position: fixed;
-          top: 0; left: 0;
-          width: 100vw;
-          height: 100vh;
-          border: none;
-          z-index: 9999;
-        }
-      </style>
-    </head>
-    <body>
-      <iframe
-        src="${RAILWAY_URL}"
-        allowfullscreen
-        allow="fullscreen"
-        scrolling="yes"
-      ></iframe>
-    </body>
-    </html>
-  `;
+  // Footer copyright
+  if ($w('#text31')) {
+    $w('#text31').text = "© 2026 MIR Investments. Todos los derechos reservados.";
+  }
 
-  try {
-    $w('#siteFrame').src = `data:text/html;charset=utf-8,${encodeURIComponent(html)}`;
-    $w('#siteFrame').expand();
-  } catch(e) {
-    // siteFrame element not yet added in editor
+  // Logo del header
+  if ($w('#image7')) {
+    $w('#image7').src =
+      "https://static.wixstatic.com/media/be9379_b8d95d2742e24da59f06520fe51dc343~mv2.png";
   }
 });
