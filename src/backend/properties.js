@@ -1,0 +1,141 @@
+export const properties = [
+  {
+    id: "prop-001",
+    name: "Walgreens – Denver MSA",
+    address: "16950 E Smoky Hill Rd, Centennial, CO 80015",
+    type: "NNN Retail",
+    city: "Centennial, CO",
+    image: "https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=800&q=80",
+    capRate: "6.98%",
+    irr: "8.5%",
+    occupancy: "100%",
+    wale: "10 años",
+    noi: "$625,000/año",
+    value: "$8,950,000",
+    leaseEnd: "Mayo 2036",
+    minInvestment: "USD $200,000",
+    allocationLimit: "USD $1,600,000 (18%)",
+    leaseType: "NNN",
+    tenant: "Walgreens Boots Alliance",
+    riskProfile: "Core",
+    highlights: [
+      "NNN – Cero responsabilidades para el propietario",
+      "Garantía corporativa Walgreens Boots Alliance",
+      "Lease hasta 2036 con opciones de renovación",
+      "Incrementos del 10% en periodos de opción",
+      "Corredor comercial de alta densidad"
+    ]
+  },
+  {
+    id: "prop-002",
+    name: "Walgreens – El Paso, TX",
+    address: "1329 George Dieter Dr, El Paso, TX 79936",
+    type: "NNN Retail",
+    city: "El Paso, TX",
+    image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80",
+    capRate: "6.99%",
+    irr: "8.5%",
+    occupancy: "100%",
+    wale: "7 años",
+    noi: "$428,000/año",
+    value: "$6,120,000",
+    leaseEnd: "Agosto 2033",
+    minInvestment: "USD $200,000",
+    allocationLimit: "USD $2,800,000 (45%)",
+    leaseType: "NNN",
+    tenant: "Walgreens Boots Alliance",
+    riskProfile: "Core",
+    highlights: [
+      "NNN – Cero responsabilidades para el propietario",
+      "Garantía corporativa Walgreens Boots Alliance",
+      "Rodeado por Lowe's, Burlington, Five Below",
+      "Lease hasta 2033",
+      "Corredor comercial de alto tráfico"
+    ]
+  },
+  {
+    id: "prop-003",
+    name: "Teleperformance – Port St. Lucie, FL",
+    address: "10400 US Hwy 1, Port St Lucie, FL 34952",
+    type: "Oficinas Corporativas",
+    city: "Port St. Lucie, FL",
+    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80",
+    capRate: "6.0%",
+    irr: "9.0%",
+    occupancy: "100%",
+    wale: "4.5 años",
+    noi: "$1,715,335/año",
+    value: "$28,588,915",
+    leaseEnd: "Octubre 2030",
+    minInvestment: "USD $200,000",
+    allocationLimit: "USD $1,400,000 (5%)",
+    leaseType: "NNN",
+    tenant: "Teleperformance (BBB S&P)",
+    riskProfile: "Core",
+    highlights: [
+      "Calificación BBB por S&P",
+      "$8.72B en ingresos 2022, 410,000 empleados globales",
+      "122,451 SF en 16.5 acres de terreno",
+      "Potencial expansión: Chipotle y TLE en negociación",
+      "Lease hasta 2030"
+    ]
+  },
+  {
+    id: "prop-004",
+    name: "Cicero Retail Center – Chicago MSA",
+    address: "4845-4849 W 111th St, Alsip, IL",
+    type: "Strip Center",
+    city: "Alsip, IL (Chicago MSA)",
+    image: "https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&w=800&q=80",
+    capRate: "6.0%",
+    irr: "7.8%",
+    occupancy: "95%",
+    wale: "5 años",
+    noi: "$554,664/año",
+    value: "$9,244,400",
+    leaseEnd: "Diciembre 2030",
+    minInvestment: "USD $200,000",
+    allocationLimit: "USD $2,000,000 (22%)",
+    leaseType: "NNN",
+    tenant: "Multi-tenant (Charter Fitness, Chintamani, más)",
+    riskProfile: "Core+",
+    highlights: [
+      "Strip Center en ubicación estratégica Chicago MSA",
+      "Múltiples inquilinos establecidos, contratos de largo plazo",
+      "Servicios de entretenimiento, salud y comercio",
+      "Adyacente a importante centro comercial",
+      "52,200 SF de espacio comercial"
+    ]
+  },
+  {
+    id: "prop-005",
+    name: "Valle del Colibrí – El Paso, TX",
+    address: "El Paso, TX – 20.54 Acres",
+    type: "Multifamily Build-to-Rent",
+    city: "El Paso, TX",
+    image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80",
+    capRate: "5.75%",
+    irr: "18%+",
+    occupancy: "En desarrollo",
+    wale: "Entrega 2028–2029",
+    noi: "$6,564,776 estabilizado",
+    value: "$114,170,014 proyectado",
+    leaseEnd: "Entrega 2028–2029",
+    minInvestment: "USD $200,000",
+    allocationLimit: "USD $10,000,000 (20% Fase I)",
+    leaseType: "BTR",
+    tenant: "374 Unidades Residenciales",
+    riskProfile: "Desarrollo",
+    highlights: [
+      "374 unidades build-to-rent en 22 edificios",
+      "IRR proyectado +18%",
+      "NOI estabilizado: $6,564,776/año",
+      "Valor de venta proyectado: $114,170,014",
+      "Club House de 5,190 SF incluido"
+    ]
+  }
+]
+
+export function getPropertyById(id) {
+  return properties.find(p => p.id === id) || null
+}
